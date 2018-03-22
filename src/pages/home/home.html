@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login Application
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="body">
+
+  <ion-list inset>
+
+    <ion-item class="body">
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" #username></ion-input>
+    </ion-item>
+<br><br>  
+    <ion-item class="body" >
+      <ion-label floating >Room</ion-label>
+      <ion-input type="text" #room></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <div padding>
+    <button block ion-button (click)="join()">Join</button>
+  </div>
+
+</ion-content>
