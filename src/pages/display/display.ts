@@ -40,7 +40,7 @@ export class DisplayPage {
   audio: { type: string, audio: boolean, video: boolean, flag: boolean, color: string};
   video: { type: string, audio: boolean, video: boolean, flag: boolean, color: string};
   private mod: Mod;
-  url = "https://global.xirsys.net/_turn/Mroads/"
+  url = "https://global.xirsys.net/_turn/ionicweb-call/"
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private zone: NgZone,
@@ -97,6 +97,7 @@ export class DisplayPage {
     this.http.put(this.url, "sdsd", { headers: this.headers }).subscribe((res: Response) => {
       console.log("ICE List: ", res.json().v.iceServers);
       this.configuration.iceServers = res.json().v.iceServers.concat(this.configuration.iceServers);
+      console.log('configuration', this.configuration);
     });
 
     this.register(this.username, this.room);
